@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Payments Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .result-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            transform: translateY(-10%); 
+        }
+        .result-container h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .result-container p {
+            font-size: 32px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/predict">Predict</a>
+    </div>
+
+    <div class="result-container">
+        <h1>Prediction Result</h1>
+        <p>The predicted fraud for the online payment is <b>["{{ prediction_text }}"]</b></p>
+    </div>
+</body>
+</html>
