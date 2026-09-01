@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Payments Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/predict">Predict</a>
+    </div>
+
+    <div class="form-container">
+        <h1>Online Payments Fraud Detection</h1>
+        <form action="/pred" method="post">
+            <label for="step">Step:</label>
+            <input type="text" name="step" id="step" placeholder="Enter time step" required>
+
+            <label for="type">Transaction Type (e.g., CASH_OUT, TRANSFER, PAYMENT):</label>
+            <input type="text" name="type" id="type" placeholder="Enter transaction type in text" required>
+
+
+            <label for="amount">Amount:</label>
+            <input type="text" name="amount" id="amount" placeholder="Enter amount" required>
+
+            <label for="oldbalanceorg">Old Balance (Sender):</label>
+            <input type="text" name="oldbalanceorg" id="oldbalanceorg" placeholder="Enter sender's old balance" required>
+
+            <label for="newbalanceorig">New Balance (Sender):</label>
+            <input type="text" name="newbalanceorig" id="newbalanceorig" placeholder="Enter sender's new balance" required>
+
+            <label for="oldbalancedest">Old Balance (Receiver):</label>
+            <input type="text" name="oldbalancedest" id="oldbalancedest" placeholder="Enter receiver's old balance" required>
+
+            <label for="newbalancedest">New Balance (Receiver):</label>
+            <input type="text" name="newbalancedest" id="newbalancedest" placeholder="Enter receiver's new balance" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
